@@ -35,7 +35,6 @@ public class ApplicationJoin {
                     .build()
             );
         }
-        System.out.println(scheduleCommentDtoList);
     }
 
     private List<ScheduleComment> selectScheduleComment() {
