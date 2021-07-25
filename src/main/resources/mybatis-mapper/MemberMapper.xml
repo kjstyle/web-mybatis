@@ -12,4 +12,13 @@
         from member
         where member_no = #{memberNo}
     </select>
+
+    <select id="selectAll" resultType="Member">
+        select
+            member_no,
+            member_id,
+            member_name,
+            member_password
+        from member
+    </select>
 </mapper>

@@ -9,6 +9,18 @@ import java.time.LocalDate;
 @Getter
 public class LicenseDto {
 
+    @NotBlank
+    private String licenseName;
+
+    @NotBlank
+    private LocalDate expiredDate;
+
+    @Builder
+    public LicenseDto(String licenseName, LocalDate expiredDate) {
+        this.licenseName = licenseName;
+        this.expiredDate = expiredDate;
+    }
+
     @Getter
     public static class Create {
 
