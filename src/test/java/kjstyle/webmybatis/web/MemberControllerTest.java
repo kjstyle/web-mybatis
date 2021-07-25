@@ -48,43 +48,6 @@ class MemberControllerTest {
     }
 
     @Test
-    void 멤버등록_정상케이스() throws Exception {
-        // given
-        LicenseDto.Create licenseDtoCreate01 = LicenseDto.Create.builder()
-                .licenseName("정보처리기사")
-                .expiredDate(LocalDate.now())
-                .build();
-
-        LicenseDto.Create licenseDtoCreate02 = LicenseDto.Create.builder()
-                .licenseName("정보기기운용기능사")
-                .expiredDate(LocalDate.now())
-                .build();
-
-        List<LicenseDto.Create> licenseList = new ArrayList<>();
-        licenseList.add(licenseDtoCreate01);
-        licenseList.add(licenseDtoCreate02);
-
-        MemberDto.Create memberDtoCreate = MemberDto.Create.builder()
-                .memberId("kjstye")
-                .memberName("이길주")
-                .memberPassword("1234")
-                .licenseList(licenseList)
-                .build();
-
-        String requestBodyJson = objectMapper.writeValueAsString(memberDtoCreate);
-
-        // when
-        final ResultActions actions = mockMvc.perform(
-                post("/members")
-                        .content(requestBodyJson)
-                        .contentType(MediaType.APPLICATION_JSON)
-        );
-
-        // then
-        actions.andExpect(status().isOk());
-    }
-
-    @Test
     void 멤버등록_리스트가null인경우() throws Exception {
         // given
         MemberDto.Create memberDtoCreate = MemberDto.Create.builder()

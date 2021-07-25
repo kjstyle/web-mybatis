@@ -10,7 +10,7 @@
     </parent>
     <groupId>kjstyle</groupId>
     <artifactId>web-mybatis</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+<!--    <version>0.0.1-SNAPSHOT</version>-->
     <name>web-mybatis</name>
     <description>Demo project for Spring Boot</description>
     <properties>
@@ -91,6 +91,9 @@
                 </configuration>
             </plugin>
         </plugins>
+
+        <!-- 빌드될 jar파일 이름을 강제화 -->
+        <finalName>app</finalName>
     </build>
 
 </project>
