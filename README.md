@@ -39,6 +39,7 @@ docker build -f Dockerfile -t spring-web-mybatis .
 ```
 
 ### docker image 생성 확인
+* docker images 명령어 조회 가능
 ```kjstyleui-MacBook-Pro:web-mybatis kjstyle$ docker images
 REPOSITORY                     TAG       IMAGE ID       CREATED          SIZE
 spring-web-mybatis             latest    9abacae16b47   11 minutes ago   691MB
